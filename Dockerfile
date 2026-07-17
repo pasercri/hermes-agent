@@ -332,7 +332,7 @@ ENV HERMES_LAZY_INSTALL_TARGET=/opt/data/lazy-packages
 # binary by absolute path, so this PATH ordering is transparent to
 # every other consumer.
 ENV PATH="/opt/hermes/bin:/opt/hermes/.venv/bin:/opt/data/.local/bin:${PATH}"
-RUN mkdir -p /opt/data
+RUN mkdir -p /opt/data #trigger redeploy
 
 
 # s6-overlay's /init is PID 1. It sets up the supervision tree, runs
